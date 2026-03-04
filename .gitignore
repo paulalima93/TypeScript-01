@@ -1,0 +1,10 @@
+# Dependências do Node (Sempre ignorado)
+node_modules/
+
+# Arquivos de configuração do TypeScript e Node (Conforme solicitado)
+tsconfig.json
+package.json
+package-lock.json
+
+# Ignorar a pasta de build gerada pelo TS (dist)
+# dist/
