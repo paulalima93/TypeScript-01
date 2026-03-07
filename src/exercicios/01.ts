@@ -16,20 +16,21 @@
 //    sublinhada a vermelho (o TypeScript encontrou o bug do Júnior!).
 // 4. Corrija a chamada da função para que o acesso seja negado corretamente.
 
-/* --- CÓDIGO A SER CORRIGIDO --- 
+// --- CÓDIGO A SER CORRIGIDO --- 
 
-function validarAcesso(usuario, senhaCorreta) {
+function validarAcesso(usuario: string, senhaCorreta:boolean){
     if (senhaCorreta) {
         console.log(`[SUCESSO] Acesso liberado para: ${usuario}`);
     } else {
         console.log(`[ERRO] Acesso negado para: ${usuario}`);
     }
+
+    return true
 }
 
-*/
+
 // O erro aconteceu aqui: o front-end enviou o texto "false" em vez do booleano false.
-// DESCOMENTE A LINHA ABAIXO PARA VER O ERRO (APÓS TIPAR A FUNÇÃO):
-// validarAcesso("admin_paula", "false"); 
+ validarAcesso("admin_paula", false); 
 
 
 
@@ -52,8 +53,12 @@ function validarAcesso(usuario, senhaCorreta) {
 
 /* --- CÓDIGO A SER CORRIGIDO --- */
 
-// let tentativasDeLogin = 3;
-// console.log(`Tentativas restantes: ${tentativasDeLogin}`);
-// tentativasDeLogin = "bloqueado"; //
+let tentativasDeLogin = 3;
+console.log(`Tentativas restantes: ${tentativasDeLogin}`);
+tentativasDeLogin =0; //
+
+if(tentativasDeLogin <= 0){
+    console.log('Login bloqueado!');
+}
 
 // 👇 ESCREVA A SUA EXPLICAÇÃO E CORREÇÃO AQUI ABAIXO 👇:
