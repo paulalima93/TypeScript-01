@@ -25,7 +25,15 @@
 
 // 👇 ESCREVA O SEU CÓDIGO AQUI 👇:
 
+let nomeServidor: string = "Servidor_AWS_01";
+let porta: number = 8080;
+let estaOnline: boolean = true;
 
+if(estaOnline){
+    console.log(`O ${nomeServidor} está rodando na porta ${porta}`);
+}else {
+    console.log( "Servidor offline.");
+}
 
 
 
@@ -52,8 +60,18 @@
 // 👇 ESCREVA O SEU CÓDIGO AQUI 👇:
 
 
+function calcularCustoMensal(custoDiario: number, diasUteis: number): number{
+    let total = 0
 
+    for (let i = 1; i <= diasUteis; i++){
+        total += custoDiario;
+    }
 
+    return total;
+}
+
+const resultado: number = calcularCustoMensal(50,20)
+console.log(resultado)
 
 // -------------------------------------------------------------------------
 // 🚨 EXERCÍCIO 3: O Perigo do "Any" (Modo Strict)
